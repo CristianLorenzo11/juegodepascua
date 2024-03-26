@@ -57,8 +57,8 @@ function mostrarImagenConejo() {
     
     // Aplica estilos CSS para hacer que la imagen sea redondeada
     imagenConejo.style.borderRadius = "50%";
-    imagenConejo.style.width = "400px"; // Modifica el tamaño de la imagen si es necesario
-    imagenConejo.style.height = "400px"; // Modifica el tamaño de la imagen si es necesario
+   // imagenConejo.style.width = "400px"; // Modifica el tamaño de la imagen si es necesario
+    //imagenConejo.style.height = "400px"; // Modifica el tamaño de la imagen si es necesario
     
     document.body.appendChild(imagenConejo); // Agrega la imagen al cuerpo del documento
 }
