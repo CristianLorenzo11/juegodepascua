@@ -62,13 +62,12 @@ button:active {
 }
 
 @media (max-width: 600px) {
-  input[type="number"] {
-      width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
-  }
+  input[type="number"],
   input[type="text"] {
-      width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
+    width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
   }
 }
+
 img {
   width: 80%; /* Haz que la imagen ocupe el 80% del ancho del contenedor en dispositivos pequeños */
   max-width: 400px; /* Limita el ancho máximo de la imagen */
