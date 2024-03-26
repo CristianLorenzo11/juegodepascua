@@ -49,16 +49,17 @@ if( numeroingresado > numeroazar){
 }
 
 }
-
 function mostrarImagenConejo() {
     let imagenConejo = document.createElement("img");
     imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
     imagenConejo.alt = "Imagen del conejo";
+    imagenConejo.id = "conejoImage"; // Asignar un ID único a la imagen
     document.body.appendChild(imagenConejo); // Agrega la imagen al cuerpo del documento
+
     // Aplica estilos CSS para hacer que la imagen sea redondeada
     imagenConejo.style.borderRadius = "50%";
-   // imagenConejo.style.width = "400px"; // Modifica el tamaño de la imagen si es necesario
-    //imagenConejo.style.height = "400px"; // Modifica el tamaño de la imagen si es necesario
+    // imagenConejo.style.width = "400px"; // Modifica el tamaño de la imagen si es necesario
+    // imagenConejo.style.height = "400px"; // Modifica el tamaño de la imagen si es necesario
 }
 
 
