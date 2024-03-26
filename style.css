@@ -65,6 +65,9 @@ button:active {
   input[type="number"] {
       width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
   }
+  input[type="text"] {
+      width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
+  }
 }
 img {
   width: 80%; /* Haz que la imagen ocupe el 80% del ancho del contenedor en dispositivos pequeños */
