@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Cambia el color de fondo para mayor contraste */
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px; /* Aumenta el tamaño del encabezado */
+  margin-bottom: 20px; /* Agrega espacio inferior */
+}
+#nombreApellido{
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc; /* Borde sólido gris */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 20%; /* Ancho del input */
+  margin-bottom: 20px; /* Espacio inferior */
+  box-sizing: border-box; /* Evita que el padding aumente el tamaño total del input */
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), /* Sombra inferior */
+              0 0 8px rgba(0, 0, 0, 0.3); /* Sombra exterior más oscura */
+}
+input[type="number"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc; /* Borde sólido gris */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 10%; /* Ancho del input */
+  margin-bottom: 20px; /* Espacio inferior */
+  box-sizing: border-box; /* Evita que el padding aumente el tamaño total del input */
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), /* Sombra inferior */
+              0 0 8px rgba(0, 0, 0, 0.3); /* Sombra exterior más oscura */
+}
+button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: 2px solid #1c045e; /* Borde más oscuro */
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves para el color de fondo y la sombra */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra por defecto */
+}
+
+
+button:hover {
+  background-color: #e03416;
+  border: 2px solid #8B0000; /* Borde más oscuro */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+}
+
+button:active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Cambia la sombra al presionar el botón */
+}
+
+#mensaje {
+  color: #333;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  input[type="number"] {
+      width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
+  }
+}
+img {
+  width: 80%; /* Haz que la imagen ocupe el 80% del ancho del contenedor en dispositivos pequeños */
+  max-width: 400px; /* Limita el ancho máximo de la imagen */
+  margin-bottom: 20px; /* Agrega espacio inferior */
+}
+

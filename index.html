@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego de adivinar el número</title>
+</head>
+<body>
+    <h1>Adiviná cuantos huevitos hay en la mochila del conejo</h1>
+    
+    <img src="CONEJO.jpeg" alt="Imagen del conejo" style="border-radius: 50%;">
+    <br>
+    <input type="text" id="nombreApellido" placeholder="Nombre y Apellido">
+    <br>
+    <p>Pista: Un numero Entre el 1 y 100:</p>
+    <input type="number" id="numeroEntrada" onkeydown="checkEnter(event)">
+    <button onclick="chequearResultado()">Comprobar</button>
+    <p id="mensaje"> ¡ A JUGAR !</p>
+    <p id="mensaje"> Cantidad de Intentos</p>
+    <p id="intento"></p>
+    <script src="script.js"></script>
+</body>
+</html>
+
