@@ -28,7 +28,7 @@ function generarNumeroAleatorio() {
       maximoNumero = 1000;
     }
     numeroazar = Math.floor(Math.random() * maximoNumero) + 1;
-    console.log(numeroazar); // Agrega este console.log para ver el número aleatorio generado
+    console.log("Número aleatorio generado:", numeroazar); // Agrega este console.log para ver el número aleatorio generado
   }
   
 
@@ -42,78 +42,83 @@ let adivinado = false; // Estado de la adivinanza
 
 // Función para chequear el número ingresado
 function chequearResultado() {
-  // Si ya se ha adivinado, no hacer nada
-  if (adivinado) {
-    return;
-  }
-  intentos++;
-  intento.textContent = intentos;
-
-  // Obtener el valor ingresado en el campo de nombre y apellido
-  nombreApellido = document.getElementById("nombreApellido").value;
-  let numeroingresado = parseInt(numeroEntrada.value);
-
-  if (nivelDificultad === "facil" && (numeroingresado < 1 || numeroingresado > 50)) {
-    mensaje.textContent = "Por favor ingresa un número válido entre 1 y 50";
-    mensaje.style.color = "black";
-    return;
-} else if (nivelDificultad === "medio" && (numeroingresado < 1 || numeroingresado > 100)) {
-    mensaje.textContent = "Por favor ingresa un número válido entre 1 y 100";
-    mensaje.style.color = "black";
-    return;
-} else if (nivelDificultad === "dificil" && (numeroingresado < 1 || numeroingresado > 1000)) {
-    mensaje.textContent = "Por favor ingresa un número válido entre 1 y 1000";
-    mensaje.style.color = "black";
-    return;
-}
-
-
-  if (numeroingresado < numeroazar) {
-    mensaje.textContent = "El numero que dijiste es muy Bajo,  En la mochila del conejo hay mayor cantidad de huevitos";
-    return;
-  }
-  if (numeroingresado > numeroazar) {
-    mensaje.textContent = "El numero que dijiste es muy Alto,  En la mochila del conejo hay menos cantidad de huevitos";
-    return;
-  }
-  // Si el jugador gana, mostrar un mensaje con su nombre y apellido
-  if (numeroingresado === numeroazar) {
-    adivinado = true; // Establecer adivinado en true
-    let mensajeNivel = "";
-    if (nivelDificultad === "facil") {
-        mensajeNivel = "Fácil";
-    } else if (nivelDificultad === "medio") {
-        mensajeNivel = "Medio";
-    } else if (nivelDificultad === "dificil") {
-        mensajeNivel = "Difícil";
+    // Si ya se ha adivinado, no hacer nada
+    if (adivinado) {
+      return;
     }
-    mensaje.textContent = "¡Felicidades, " + nombreApellido + ", Adivinaste la cantidad de huevitos en el Nivel " + mensajeNivel + "!";
-    mensaje.style.color = "green";
-    mensaje.style.fontSize = "24px"; // Cambiar tamaño de letra si deseas
-    mostrarImagenConejo(); // Llama a la función para mostrar la imagen del conejo
-    numeroEntrada.disabled = true;
-    document.getElementById("selectDificultad").disabled = true; // Deshabilitar el selector de dificultad
-    // Selecciona la imagen del conejo por su ruta
-    const imagenConejo = document.querySelector('img[src="CONEJO1.jpeg"]');
-    
-    // Verifica si la imagen del conejo existe antes de hacer scroll
-    if (imagenConejo) {
-        imagenConejo.scrollIntoView({ behavior: 'smooth' });
+    intentos++;
+    intento.textContent = intentos;
+  
+    // Obtener el valor ingresado en el campo de nombre y apellido
+    nombreApellido = document.getElementById("nombreApellido").value;
+    let numeroingresado = parseInt(numeroEntrada.value);
+  
+    // Validar el rango del número ingresado según el nivel de dificultad
+    if (nivelDificultad === "facil" && (numeroingresado < 1 || numeroingresado > 50)) {
+      mensaje.textContent = "Por favor ingresa un número válido entre 1 y 50";
+      mensaje.style.color = "black";
+      return;
+    } else if (nivelDificultad === "medio" && (numeroingresado < 1 || numeroingresado > 100)) {
+      mensaje.textContent = "Por favor ingresa un número válido entre 1 y 100";
+      mensaje.style.color = "black";
+      return;
+    } else if (nivelDificultad === "dificil" && (numeroingresado < 1 || numeroingresado > 1000)) {
+      mensaje.textContent = "Por favor ingresa un número válido entre 1 y 1000";
+      mensaje.style.color = "black";
+      return;
     }
+  
+    // Comparar el número ingresado con el número aleatorio
+    if (numeroingresado < numeroazar) {
+      mensaje.textContent = "El numero que dijiste es muy Bajo,  En la mochila del conejo hay mayor cantidad de huevitos";
+      return;
+    }
+    if (numeroingresado > numeroazar) {
+      mensaje.textContent = "El numero que dijiste es muy Alto,  En la mochila del conejo hay menos cantidad de huevitos";
+      return;
+    }
+  
+    // Si el jugador gana, mostrar un mensaje con su nombre y apellido
+    if (numeroingresado === numeroazar) {
+      adivinado = true; // Establecer adivinado en true
+      let mensajeNivel = "";
+      if (nivelDificultad === "facil") {
+          mensajeNivel = "Fácil";
+      } else if (nivelDificultad === "medio") {
+          mensajeNivel = "Medio";
+      } else if (nivelDificultad === "dificil") {
+          mensajeNivel = "Difícil";
+      }
+      mensaje.textContent = "¡Felicidades, " + nombreApellido + ", Adivinaste la cantidad de huevitos en el Nivel " + mensajeNivel + "!";
+      mensaje.style.color = "green";
+      mensaje.style.fontSize = "24px"; // Cambiar tamaño de letra si deseas
+      mostrarImagenConejo(); // Llama a la función para mostrar la imagen del conejo
+      numeroEntrada.disabled = true;
+      document.getElementById("selectDificultad").disabled = true; // Deshabilitar el selector de dificultad
     
-    return;
-}
-}
+      return;
+    }
+  }
+  
 
-function mostrarImagenConejo() {
-  let imagenConejo = document.createElement("img");
-  imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
-  imagenConejo.alt = "Imagen del conejo";
-  document.body.appendChild(imagenConejo); // Agrega la imagen al cuerpo del documento    
-  // Aplica estilos CSS para hacer que la imagen sea redondeada
-  imagenConejo.style.borderRadius = "50%";
-
-}
+  function mostrarImagenConejo() {
+    let imagenConejo = document.createElement("img");
+    imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
+    imagenConejo.alt = "Imagen del conejo";
+    
+    // Aplica estilos CSS para hacer que la imagen sea redondeada
+    imagenConejo.style.borderRadius = "50%";
+    
+    // Agregar la imagen al cuerpo del documento
+    document.body.appendChild(imagenConejo);
+    
+    // Esperar un breve momento para que la imagen se agregue completamente al DOM
+    setTimeout(function() {
+      // Hacer scroll para mostrar la imagen del conejo
+      imagenConejo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+        
 
 function checkEnter(event) {
   if (event.key === "Enter") {
