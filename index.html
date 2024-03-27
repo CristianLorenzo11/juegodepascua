@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,17 @@
     <br>
     <input type="text" id="nombreApellido" placeholder="Nombre y Apellido">
     <br>
-    <p>Pista: Un numero Entre el 1 y 100:</p>
+    <div id="nivelDificultad">
+        <label for="selectDificultad">Selecciona el nivel de dificultad:</label>
+        <select id="selectDificultad">
+          <option value="facil">Fácil</option>
+          <option value="medio" selected>Medio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+      </div>
+      
+      <p id="pistaMensaje"></p>
+
     <input type="number" id="numeroEntrada" onkeydown="checkEnter(event)">
     <button onclick="chequearResultado()">Comprobar</button>
     <p id="mensaje"> ¡ A JUGAR !</p>
