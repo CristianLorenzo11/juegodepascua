@@ -79,7 +79,6 @@ img {
 }
 
 #selectDificultad {
-  width: 100%; /* Asegura que el selector ocupe todo el ancho */
   padding: 10px;
   font-size: 18px;
   border: 1px solid #ccc; /* Borde sólido gris */
