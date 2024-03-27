@@ -7,10 +7,15 @@ let numeroEntrada= document.getElementById("numeroEntrada") // aca se ingresa el
 let mensaje = document.getElementById("mensaje")
 let intento= document.getElementById("intento")
  let intentos= 0
+let adivinado = false; // Estado de la adivinanza
 
-//funcion para chequear el numero ingresado 
-function chequearResultado(){
-intentos ++
+ // Función para chequear el número ingresado
+ function chequearResultado() {
+     // Si ya se ha adivinado, no hacer nada
+     if (adivinado){
+        return;
+    } 
+  intentos ++
 intento.textContent= intentos
     // Obtener el valor ingresado en el campo de nombre y apellido
     nombreApellido = document.getElementById("nombreApellido").value;
@@ -32,6 +37,7 @@ if( numeroingresado > numeroazar){
 }
    // Si el jugador gana, mostrar un mensaje con su nombre y apellido
    if (numeroingresado === numeroazar) {
+    adivinado = true; // Establecer adivinado en true
     mensaje.textContent = "¡Felicidades, " + nombreApellido + ", Adivinaste la cantidad de huevitos!";
     mensaje.style.color = "green";
     mensaje.style.fontSize = "24px"; // Cambiar tamaño de letra si deseas
