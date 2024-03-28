@@ -101,7 +101,7 @@ function chequearResultado() {
   }
   
 
-  function mostrarImagenConejo() {
+    function mostrarImagenConejo() {
     let imagenConejo = document.createElement("img");
     imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
     imagenConejo.alt = "Imagen del conejo";
@@ -118,6 +118,7 @@ function chequearResultado() {
       imagenConejo.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   }
+  
         
 
 function checkEnter(event) {
