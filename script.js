@@ -113,7 +113,7 @@ function chequearResultado() {
       mensajeNivel = "Difícil";
     }
     mensaje.textContent = `¡Felicidades, ${nombreApellido}! Adivinaste la cantidad de huevitos en el Nivel ${mensajeNivel} en ${tiempoMensaje}!`;
-    mensaje.style.color = "green";
+    mensaje.style.color = "#FFD700"
     mensaje.style.fontSize = "24px"; // Cambiar tamaño de letra si deseas
     mostrarImagenConejo(); // Llama a la función para mostrar la imagen del conejo
     numeroEntrada.disabled = true;
