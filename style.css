@@ -1,90 +1,67 @@
 body {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Cambia el color de fondo para mayor contraste */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #6495ED; /* Cambia el color de fondo a azul claro */
   padding: 20px;
 }
 
 h1 {
-  color: #333;
-  font-size: 24px; /* Aumenta el tamaño del encabezado */
+  color: #FFD700; /* Cambia el color del encabezado a dorado */
+  font-size: 36px; /* Aumenta el tamaño del encabezado */
   margin-bottom: 20px; /* Agrega espacio inferior */
 }
-#nombreApellido{
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc; /* Borde sólido gris */
-  border-radius: 5px; /* Bordes redondeados */
-  margin-bottom: 20px; /* Espacio inferior */
-  box-sizing: border-box; /* Evita que el padding aumente el tamaño total del input */
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), /* Sombra inferior */
-              0 0 8px rgba(0, 0, 0, 0.3); /* Sombra exterior más oscura */
-}
+
+#nombreApellido,
 input[type="number"] {
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc; /* Borde sólido gris */
-  border-radius: 5px; /* Bordes redondeados */
-  width: 10%; /* Ancho del input */
+  padding: 15px;
+  font-size: 20px;
+  border: 2px solid #FFD700; /* Borde dorado */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 200px; /* Reducir el ancho del input */
   margin-bottom: 20px; /* Espacio inferior */
   box-sizing: border-box; /* Evita que el padding aumente el tamaño total del input */
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), /* Sombra inferior */
-              0 0 8px rgba(0, 0, 0, 0.3); /* Sombra exterior más oscura */
-}
-button {
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border: 2px solid #1c045e; /* Borde más oscuro */
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves para el color de fondo y la sombra */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra por defecto */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #2f3dfd; /* Cambia el color de fondo a naranja */
+  color: white;
+  border: 3px solid #FFD700; /* Borde dorado más grueso */
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
 
 button:hover {
-  background-color: #e03416;
-  border: 2px solid #8B0000; /* Borde más oscuro */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más suave */
-}
-
-button:active {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Cambia la sombra al presionar el botón */
+  background-color: #FF6347; /* Cambia el color de fondo al pasar el cursor */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra más suave */
 }
 
 #mensaje {
-  color: #333;
-  font-size: 18px;
+  color: #FFD700; /* Cambia el color del mensaje */
+  font-size: 20px;
   margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-  input[type="number"],
-  input[type="text"],
-  #nombreApellido {
+  #nombreApellido,
+  input[type="number"] {
     width: 100%; /* Haz que el input ocupe todo el ancho en dispositivos pequeños */
   }
 }
-
 
 img {
   width: 80%; /* Haz que la imagen ocupe el 80% del ancho del contenedor en dispositivos pequeños */
   max-width: 400px; /* Limita el ancho máximo de la imagen */
   margin-bottom: 20px; /* Agrega espacio inferior */
 }
-#nivelDificultad {
-  margin-bottom: 20px; /* Agrega espacio inferior */
-}
-
-#selectDificultad {
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc; /* Borde sólido gris */
-  border-radius: 5px; /* Bordes redondeados */
-  box-sizing: border-box; /* Evita que el padding aumente el tamaño total del selector */
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), /* Sombra inferior */
-              0 0 8px rgba(0, 0, 0, 0.3); /* Sombra exterior más oscura */
-}
-
