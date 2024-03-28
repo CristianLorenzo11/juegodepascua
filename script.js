@@ -42,6 +42,14 @@ let adivinado = false; // Estado de la adivinanza
 
 // Función para chequear el número ingresado
 function chequearResultado() {
+  // Verificar si se ha ingresado un nombre y apellido
+  nombreApellido = document.getElementById("nombreApellido").value;
+  if (nombreApellido.trim() === "") {
+      alert("Por favor ingresa tu nombre y apellido antes de comenzar a jugar.");
+      // Limpiar el campo de número
+      document.getElementById("numeroEntrada").value = "";
+      return;
+  }
     // Si ya se ha adivinado, no hacer nada
     if (adivinado) {
       return;
@@ -101,7 +109,7 @@ function chequearResultado() {
   }
   
 
-    function mostrarImagenConejo() {
+  function mostrarImagenConejo() {
     let imagenConejo = document.createElement("img");
     imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
     imagenConejo.alt = "Imagen del conejo";
@@ -118,7 +126,6 @@ function chequearResultado() {
       imagenConejo.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   }
-  
         
 
 function checkEnter(event) {
