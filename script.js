@@ -124,7 +124,7 @@ function chequearResultado() {
 
 function mostrarImagenConejo() {
   let imagenConejo = document.createElement("img");
-  imagenConejo.src = "CONEJO1.jpeg"; // Ruta de la imagen del conejo
+  imagenConejo.src = "CONEJO5.jpeg"; // Ruta de la imagen del conejo
   imagenConejo.alt = "Imagen del conejo";
   
   // Aplica estilos CSS para hacer que la imagen sea redondeada
