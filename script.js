@@ -30,7 +30,7 @@ function generarNumeroAleatorio() {
       maximoNumero = 1000;
     }
     numeroazar = Math.floor(Math.random() * maximoNumero) + 1;
-    console.log("Número aleatorio generado:", numeroazar); // Agrega este console.log para ver el número aleatorio generado
+   // console.log("Número aleatorio generado:", numeroazar); // Agrega este console.log para ver el número aleatorio generado
   }
   
 // Variable para almacenar el nombre y apellido del jugador
